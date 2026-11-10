@@ -57,6 +57,9 @@ em{font-style:italic;font-weight:400}
 .manifesto p.big em{color:var(--stone)}
 .manifesto .after{margin-top:clamp(40px,6vw,72px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);max-width:960px;margin-left:auto}
 .manifesto .after p{font-size:1.05rem;color:var(--muted)}
+.manifesto .name-note{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(16px,5vw,72px);padding-top:24px;border-top:1px solid var(--line);margin-top:8px}
+.manifesto .name-note p b{color:var(--ink);font-weight:600}
+@media (max-width:700px){.manifesto .name-note{grid-template-columns:1fr;gap:10px}}
 
 /* ---------- Split con foto ---------- */
 .split-img{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
@@ -257,6 +260,7 @@ footer .legal{display:flex;flex-direction:column;gap:4px;max-width:62em}
       <div class="after">
         <p>Opere contemporanee nei palazzi liberty, nelle hall degli hotel storici e negli spazi delle terme. Il visitatore attraversa Montecatini seguendo un percorso, e ogni tappa è un motivo per fermarsi.</p>
         <p>Il progetto lavora sui mesi in cui la città ne ha più bisogno: un'anteprima a luglio, poi l'inaugurazione a novembre, un mese di mostra e la premiazione in chiusura.</p>
+        <div class="name-note"><span class="label">Perché Unwalled</span><p><b>Unwalled</b> in inglese vuol dire «senza muri». È l'idea del progetto: l'arte esce dalle sale chiuse e abita la città, tra palazzi, hotel e terme. Un nome internazionale, che si capisce subito sia dagli artisti della call sia da un pubblico in gran parte straniero.</p></div>
       </div>
     </div>
   </section>
@@ -365,7 +369,7 @@ footer .legal{display:flex;flex-direction:column;gap:4px;max-width:62em}
   var reduce=!!(mq&&mq.matches);
   if(!('IntersectionObserver' in window))return;
   document.documentElement.classList.add('rv');
-  var sel='.head > *, .manifesto .label, .manifesto p.big, .manifesto .after p, .split-img figure, .split-img .text > *, .place, .pillar, .timeline li, .fig, .benefits li, .band p, .closing p';
+  var sel='.head > *, .manifesto .label, .manifesto p.big, .manifesto .after p, .manifesto .name-note, .split-img figure, .split-img .text > *, .place, .pillar, .timeline li, .fig, .benefits li, .band p, .closing p';
   var els=[].slice.call(document.querySelectorAll(sel));
   els.forEach(function(el){
     el.classList.add('reveal');
