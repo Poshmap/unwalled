@@ -114,6 +114,9 @@ h2 em{color:var(--stone)}
 
 .pillar h3{font-size:1.5rem;font-weight:600;letter-spacing:-.02em;line-height:1.15}
 .pillar p{color:var(--muted);font-size:1rem}
+.pillars-6{row-gap:clamp(40px,5vw,64px)}
+.awards-note{margin-top:clamp(40px,5vw,64px);padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:1rem;max-width:52em}
+@media (max-width:900px){.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 /* ---------- Calendario ---------- */
 .cal{background:var(--soft)}
@@ -272,7 +275,7 @@ footer .wrap{align-items:center}
     <div class="foot">
       <div><b>Luglio 2027</b><span>Anteprima e annuncio dei finalisti</span></div>
       <div><b>Novembre 2027</b><span>Inaugurazione e 3–4 settimane di mostra</span></div>
-      <div><b>Weekend di chiusura</b><span>Premiazione degli Awards</span></div>
+      <div><b>Weekend di chiusura</b><span>Serata di premiazione degli Awards</span></div>
     </div>
   </div>
   <span class="scroll-cue" aria-hidden="true"></span>
@@ -304,7 +307,7 @@ footer .wrap{align-items:center}
           <ul>
             <li><b>Scoprire l'opera e l'artista,</b> con immagini, testi e audio.</li>
             <li><b>Trovare la strada</b> verso la tappa successiva sulla mappa.</li>
-            <li><b>Votare</b> per il premio del pubblico, direttamente dal telefono.</li>
+            <li><b>Votare</b> per il Premio del pubblico, direttamente dal telefono.</li>
           </ul>
         </div>
         <p>Il risultato: più giorni di pubblico, più notti in città, più visibilità per partner e sponsor.</p>
@@ -335,14 +338,18 @@ footer .wrap{align-items:center}
   <section class="section">
     <div class="wrap">
       <div class="head">
-        <span class="label">Il premio</span>
-        <h2>Un riconoscimento che <em>regge lo sguardo</em> della critica</h2>
+        <span class="label">I premi</span>
+        <h2>Una serata, <em>più premi:</em> ogni categoria ha il suo vincitore</h2>
       </div>
-      <div class="pillars">
-        <div class="pillar"><h3>Call internazionale</h3><p>Un bando aperto ad artisti emergenti, con criteri pubblici e tempi chiari.</p></div>
-        <div class="pillar"><h3>Giuria indipendente</h3><p>Curatori e critici senza interessi commerciali sulle opere in concorso.</p></div>
-        <div class="pillar"><h3>Voto del pubblico</h3><p>I visitatori votano lungo il percorso per tutta la durata della mostra, con un sistema che limita i voti gonfiati.</p></div>
+      <div class="pillars pillars-6">
+        <div class="pillar"><h3>Premio Unwalled</h3><p>Il riconoscimento assoluto, scelto dalla giuria tra tutte le opere in mostra.</p></div>
+        <div class="pillar"><h3>Premi per linguaggio</h3><p>Pittura, scultura e installazione, fotografia e video, arte digitale.</p></div>
+        <div class="pillar"><h3>Premio al luogo</h3><p>All'opera che dialoga meglio con il palazzo, l'hotel o le terme che la ospitano.</p></div>
+        <div class="pillar"><h3>Premio emergenti</h3><p>Under 35, con una residenza o una mostra personale a Montecatini nel 2028.</p></div>
+        <div class="pillar"><h3>Premio alla carriera</h3><p>Un artista affermato, fuori concorso: il nome che porta la stampa nazionale.</p></div>
+        <div class="pillar"><h3>Premio del pubblico</h3><p>Si vota lungo il percorso per tutta la mostra, un voto verificato per persona.</p></div>
       </div>
+      <p class="awards-note">Ogni premio può portare il nome di uno sponsor o di un hotel partner. Le gallerie presentano e vendono le opere, ma non siedono in giuria.</p>
     </div>
   </section>
 
