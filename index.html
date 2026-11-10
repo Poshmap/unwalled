@@ -146,6 +146,9 @@ h2 em{color:var(--stone)}
 .closing{padding-block:clamp(96px,14vw,180px) clamp(48px,6vw,72px);text-align:left}
 .closing p{font-size:clamp(2.6rem,8vw,7rem);line-height:.92;font-weight:800;letter-spacing:-.05em}
 .closing p em{color:var(--stone);font-weight:400}
+.closing-brand{display:block;width:fit-content;font-size:clamp(3rem,9.6vw,9rem);line-height:.88;font-weight:800;letter-spacing:-.045em;margin-bottom:clamp(44px,6vw,88px);padding-bottom:.06em;background:linear-gradient(rgba(14,12,10,.22),rgba(14,12,10,.22)),url(terme.jpg) center 50%/cover no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.closing-brand span{display:block}
+.closing-brand em{font-weight:400;letter-spacing:-.04em}
 .closing-row{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap}
 .closing .aside-note{font-size:1rem;line-height:1.5;font-weight:400;letter-spacing:0;color:var(--muted);max-width:22em;padding-top:16px;border-top:2px solid var(--stone);margin-bottom:.9em}
 
@@ -260,6 +263,7 @@ footer .wrap{align-items:center}
   .benefits li{font-size:1.05rem}
   .closing{padding-block:88px 48px}
   .closing p{font-size:clamp(2.6rem,13vw,3.8rem)}
+  .closing-brand{font-size:clamp(3rem,15vw,4.8rem)}
   footer .wrap{flex-direction:column;align-items:flex-start;gap:16px}
 }
 </style>
@@ -392,6 +396,7 @@ footer .wrap{align-items:center}
   </section>
 
   <section class="closing" style="border-top:1px solid var(--line)">
+    <div class="wrap"><div class="closing-brand" role="img" aria-label="Unwalled Art Awards"><span>Unwalled</span><span><em>Art Awards</em></span></div></div>
     <div class="wrap closing-row"><p>Montecatini,<br><em>novembre 2027.</em></p>
       <p class="aside-note">Pagina a corredo della presentazione del progetto all'Amministrazione comunale di Montecatini Terme.</p>
     </div>
@@ -412,7 +417,7 @@ footer .wrap{align-items:center}
   var reduce=!!(mq&&mq.matches);
   if(!('IntersectionObserver' in window))return;
   document.documentElement.classList.add('rv');
-  var sel='.head > *, .manifesto .label, .manifesto p.big, .manifesto .after p, .manifesto .name-note, .split-img figure, .split-img .text > *, .place, .pillar, .timeline li, .fig, .benefits li, .band p, .closing p';
+  var sel='.head > *, .manifesto .label, .manifesto p.big, .manifesto .after p, .manifesto .name-note, .split-img figure, .split-img .text > *, .place, .pillar, .timeline li, .fig, .benefits li, .band p, .closing-brand, .closing p';
   var els=[].slice.call(document.querySelectorAll(sel));
   els.forEach(function(el){
     el.classList.add('reveal');
