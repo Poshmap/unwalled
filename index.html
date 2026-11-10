@@ -128,6 +128,13 @@ h2 em{color:var(--stone)}
 footer{border-top:1px solid var(--line);padding-block:28px 40px;font-size:.8rem;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer .legal{display:flex;flex-direction:column;gap:4px;max-width:62em}
+footer .wrap{align-items:center}
+.totop{display:inline-flex;align-items:center;gap:8px;flex:none;color:var(--ink);text-decoration:none;font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:10px 14px;border:1px solid var(--line);border-radius:999px;transition:border-color .3s,color .3s}
+.totop svg{transition:transform .3s}
+.totop:hover,.totop:focus-visible{border-color:var(--stone);color:var(--stone)}
+.totop:hover svg{transform:translateY(-3px)}
+.totop:focus-visible{outline:2px solid var(--stone);outline-offset:3px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 
 .manifesto p.big em{background:linear-gradient(var(--stone),var(--stone)) left 92%/100% 2px no-repeat;padding-bottom:.04em}
 .place{transition:background-color .4s ease}
@@ -231,13 +238,13 @@ footer .legal{display:flex;flex-direction:column;gap:4px;max-width:62em}
   .benefits li{font-size:1.05rem}
   .closing{padding-block:88px 48px}
   .closing p{font-size:clamp(2.6rem,13vw,3.8rem)}
-  footer .wrap{flex-direction:column;gap:8px}
+  footer .wrap{flex-direction:column;align-items:flex-start;gap:16px}
 }
 </style>
 </head>
 <body>
 
-<header class="hero">
+<header class="hero" id="top">
   <img class="hero-img" src="terme.jpg" alt="Il colonnato e la vasca delle Terme Tettuccio a Montecatini">
   <div class="wrap top"><span>Montecatini Terme</span><span>Prima edizione · 2027</span></div>
   <div class="wrap body">
@@ -359,6 +366,7 @@ footer .legal{display:flex;flex-direction:column;gap:4px;max-width:62em}
 <footer>
   <div class="wrap">
     <div class="legal"><p>Concept preliminare presentato all'Amministrazione comunale di Montecatini Terme. Date, sedi e programma sono ipotesi di lavoro.</p><p>Proposta riservata. Il progetto e il format sono di proprietà dell'ideatore: ogni utilizzo richiede il suo consenso scritto.</p></div>
+    <a class="totop" href="#top" aria-label="Torna all'inizio della pagina">Torna su<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
 
   </div>
 </footer>
