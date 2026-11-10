@@ -119,6 +119,17 @@ h2 em{color:var(--stone)}
 .closing{padding-block:clamp(96px,14vw,180px) clamp(48px,6vw,72px);text-align:left}
 .closing p{font-size:clamp(2.6rem,8vw,7rem);line-height:.92;font-weight:800;letter-spacing:-.05em}
 .closing p em{color:var(--stone);font-weight:400}
+.closing-row{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.dl{display:inline-flex;align-items:center;gap:18px;padding:18px 22px 18px 26px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;border-radius:999px;transition:background-color .3s,color .3s,transform .3s;margin-bottom:.6em}
+.dl-txt{display:flex;flex-direction:column;line-height:1.25}
+.dl-txt b{font-weight:600;font-size:1.02rem}
+.dl-txt span{font-size:.78rem;color:var(--muted);transition:color .3s}
+.dl svg{flex:none;transition:transform .3s}
+.dl:hover,.dl:focus-visible{background:var(--ink);color:#fff}
+.dl:hover .dl-txt span,.dl:focus-visible .dl-txt span{color:rgba(255,255,255,.75)}
+.dl:hover svg{transform:translateY(3px)}
+.dl:focus-visible{outline:2px solid var(--stone);outline-offset:3px}
+
 footer{border-top:1px solid var(--line);padding-block:28px 40px;font-size:.8rem;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer .legal{display:flex;flex-direction:column;gap:4px;max-width:62em}
@@ -343,7 +354,12 @@ footer .legal{display:flex;flex-direction:column;gap:4px;max-width:62em}
   </section>
 
   <section class="closing" style="border-top:1px solid var(--line)">
-    <div class="wrap"><p>Montecatini,<br><em>novembre 2027.</em></p></div>
+    <div class="wrap closing-row"><p>Montecatini,<br><em>novembre 2027.</em></p>
+      <a class="dl" href="unwalled-art-awards-montecatini.pdf" download>
+        <span class="dl-txt"><b>Scarica la presentazione</b><span>PDF · 10 slide · 3 MB</span></span>
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6.5 10.5 12 16l5.5-5.5M5 20h14"/></svg>
+      </a>
+    </div>
   </section>
 </main>
 
@@ -360,7 +376,7 @@ footer .legal{display:flex;flex-direction:column;gap:4px;max-width:62em}
   var reduce=!!(mq&&mq.matches);
   if(!('IntersectionObserver' in window))return;
   document.documentElement.classList.add('rv');
-  var sel='.head > *, .manifesto .label, .manifesto p.big, .manifesto .after p, .split-img figure, .split-img .text > *, .place, .pillar, .timeline li, .fig, .benefits li, .band p, .closing p';
+  var sel='.head > *, .manifesto .label, .manifesto p.big, .manifesto .after p, .split-img figure, .split-img .text > *, .place, .pillar, .timeline li, .fig, .benefits li, .band p, .closing p, .dl';
   var els=[].slice.call(document.querySelectorAll(sel));
   els.forEach(function(el){
     el.classList.add('reveal');
