@@ -69,6 +69,12 @@ em{font-style:italic;font-weight:400}
 h2{font-size:clamp(2.2rem,4.8vw,4rem);line-height:1.02;font-weight:700;letter-spacing:-.035em}
 h2 em{color:var(--stone)}
 .split-img .text p{font-size:1.08rem;color:var(--muted);max-width:32em}
+.interactive{display:flex;flex-direction:column;gap:14px;padding:24px 26px;background:var(--soft);border-left:3px solid var(--stone);max-width:34em}
+.split-img .text .interactive p{font-size:1rem;color:var(--ink)}
+.interactive ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.interactive li{position:relative;padding-left:24px;font-size:1rem;line-height:1.5;color:var(--muted)}
+.interactive li b{color:var(--ink);font-weight:600}
+.interactive li::before{content:"";position:absolute;left:0;top:.68em;width:12px;height:2px;background:var(--stone)}
 
 /* ---------- Percorso ---------- */
 .head{display:flex;flex-direction:column;gap:20px;max-width:820px}
@@ -278,7 +284,16 @@ footer .wrap{align-items:center}
       <div class="text">
         <span class="label">Il formato</span>
         <h2>Una mostra, <em>non solo</em> un evento</h2>
-        <p>Allestire opere in più sedi costa quasi lo stesso per due giorni o per un mese. Per questo il progetto è una mostra di tre o quattro settimane: si apre con un weekend di inaugurazione e incontri, e si chiude con la premiazione, quando il pubblico ha visto e votato le opere.</p>
+        <p>Tre o quattro settimane di mostra, aperte da un weekend di inaugurazione e incontri e chiuse dalla premiazione. Un tempo abbastanza lungo perché la città si riempia di visitatori, e perché il pubblico possa vedere le opere prima di votarle.</p>
+        <div class="interactive">
+          <span class="label">Un percorso interattivo</span>
+          <p>Accanto a ogni opera un QR apre una pagina web, senza app da scaricare. Il visitatore cammina per la città e, tappa dopo tappa, può:</p>
+          <ul>
+            <li><b>Scoprire l'opera e l'artista,</b> con immagini, testi e audio.</li>
+            <li><b>Trovare la strada</b> verso la tappa successiva sulla mappa.</li>
+            <li><b>Votare</b> per il premio del pubblico, direttamente dal telefono.</li>
+          </ul>
+        </div>
         <p>Il risultato: più giorni di pubblico, più notti in città, più visibilità per partner e sponsor.</p>
       </div>
     </div>
