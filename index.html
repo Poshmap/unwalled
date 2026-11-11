@@ -96,6 +96,14 @@ h2 em{color:var(--stone)}
 .places{margin-top:clamp(56px,8vw,96px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
 .place{padding:clamp(28px,4vw,44px) clamp(20px,4vw,48px) clamp(28px,4vw,44px) 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:10px;min-width:0}
 .place:nth-child(even){padding-left:clamp(20px,4vw,48px);border-left:1px solid var(--line)}
+.landmarks{margin-top:clamp(64px,8vw,104px)}
+.landmarks ul{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(24px,3vw,48px)}
+.landmarks li{display:flex;flex-direction:column;gap:8px;min-width:0}
+.landmarks svg{width:clamp(56px,5vw,72px);height:auto;color:var(--stone);margin-bottom:6px;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.landmarks h4{margin:0;font-size:1.15rem;font-weight:600;letter-spacing:-.01em;line-height:1.2}
+.landmarks p{margin:0;font-size:.95rem;color:var(--muted);line-height:1.5}
+@media (hover:hover){.landmarks li:hover svg{transform:translateY(-4px)}}
+@media (max-width:900px){.landmarks ul{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}}
 .place .tag{font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--stone)}
 .place h3{font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.1;font-weight:600;letter-spacing:-.025em}
 .place p{color:var(--muted);font-size:1rem;max-width:30em}
@@ -331,6 +339,15 @@ footer .wrap{align-items:center}
         <div class="place"><span class="tag">Acqua</span><h3>Spazi termali</h3><p>Le terme, patrimonio UNESCO dal 2021 con le Great Spa Towns of Europe.</p></div>
         <div class="place"><span class="tag">Premiazione</span><h3>Una sede simbolo</h3><p>La premiazione finale in uno dei luoghi più rappresentativi, da scegliere con l'Amministrazione.</p></div>
       </div>
+      <div class="landmarks">
+        <span class="label">Alcuni luoghi possibili</span>
+        <ul>
+          <li><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 54h48M10 50h44M14 50V30M22 50V30M32 50V30M42 50V30M50 50V30M11 30h42M11 26h42M14 26c2-10 10-16 18-16s16 6 18 16M32 10V6"/></svg><h4>Terme Tettuccio</h4><p>Il colonnato e le sale storiche, simbolo della città termale.</p></li>
+          <li><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 54h48M12 54V24h40v30M8 24l24-14 24 14M18 54V40a4 4 0 0 1 8 0v14M38 54V40a4 4 0 0 1 8 0v14M28 30h8v8h-8z"/></svg><h4>MO.C.A.</h4><p>La galleria civica d'arte della città, primo presidio del contemporaneo.</p></li>
+          <li><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 56L50 21M4 56h18M48 22V13l6-5 6 5v9zM52 22v-5h4v5"/><rect x="21" y="31" width="16" height="9" rx="1.5" transform="rotate(-38.7 29 35.5)"/></svg><h4>Funicolare</h4><p>Dal 1898 sale a Montecatini Alto: anche il viaggio diventa percorso.</p></li>
+          <li><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 54h52M18 54V40M18 40c-8 0-10-6-8-11s8-6 8-12c4 3 10 5 10 12s-3 11-10 11zM36 54c0-5 4-7 8-7s8 2 8 7M44 47V36M44 36c-2 3-5 3-7 2M44 36c2 3 5 3 7 2"/></svg><h4>Parco delle Terme</h4><p>Il verde tra gli stabilimenti, per le opere all'aperto.</p></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -417,7 +434,7 @@ footer .wrap{align-items:center}
   var reduce=!!(mq&&mq.matches);
   if(!('IntersectionObserver' in window))return;
   document.documentElement.classList.add('rv');
-  var sel='.head > *, .manifesto .label, .manifesto p.big, .manifesto .after p, .manifesto .name-note, .split-img figure, .split-img .text > *, .place, .pillar, .timeline li, .fig, .benefits li, .band p, .closing-brand, .closing p';
+  var sel='.head > *, .manifesto .label, .manifesto p.big, .manifesto .after p, .manifesto .name-note, .split-img figure, .split-img .text > *, .place, .landmarks .label, .landmarks li, .pillar, .timeline li, .fig, .benefits li, .band p, .closing-brand, .closing p';
   var els=[].slice.call(document.querySelectorAll(sel));
   els.forEach(function(el){
     el.classList.add('reveal');
