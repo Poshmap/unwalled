@@ -126,9 +126,9 @@ h2 em{color:var(--stone)}
 
 /* ---------- Calendario ---------- */
 .cal{background:var(--soft)}
-.timeline{list-style:none;margin:clamp(56px,8vw,96px) 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0}
+.timeline{list-style:none;margin:clamp(56px,8vw,96px) 0 0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0}
 .timeline li{display:flex;flex-direction:column;gap:8px;padding:24px 18px 0 0;border-top:1px solid #d8d4cc;min-width:0}
-.timeline .m{font-size:clamp(1.4rem,2.4vw,2rem);font-weight:600;letter-spacing:-.03em;line-height:1}
+.timeline .m{font-size:clamp(1.3rem,2vw,1.7rem);font-weight:600;letter-spacing:-.03em;line-height:1}
 .timeline h3{font-size:.95rem;font-weight:600;margin-top:6px}
 .timeline p{font-size:.9rem;color:var(--muted)}
 .timeline li.key{border-top:3px solid var(--stone);padding-top:22px}
@@ -219,7 +219,7 @@ footer .wrap{align-items:center}
 
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
-  .timeline{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:40px}
+  .timeline{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:40px}
   .places{grid-template-columns:1fr}
   .place:nth-child(even){padding-left:0;border-left:none}
 }
@@ -380,9 +380,10 @@ footer .wrap{align-items:center}
       </div>
       <ol class="timeline">
         <li><span class="m">Gennaio<sup class="ast">*</sup></span><h3>Avvio</h3><p>Incarico e squadra di progetto.</p></li>
-        <li><span class="m">Marzo</span><h3>Call artisti</h3><p>Pubblicazione del bando internazionale.</p></li>
-        <li><span class="m">Giugno</span><h3>Giuria</h3><p>Selezione dei finalisti.</p></li>
-        <li class="key"><span class="m">Luglio</span><h3>Anteprima</h3><p>Annuncio dei finalisti e primo appuntamento in città.</p></li>
+        <li><span class="m">Marzo</span><h3>Call artisti</h3><p>Pubblicazione del bando internazionale, accordi con hotel e spazi.</p></li>
+        <li><span class="m">Giugno</span><h3>Finalisti e pacchetti</h3><p>La giuria seleziona i finalisti, apre la vendita dei pacchetti arte e terme.</p></li>
+        <li class="key"><span class="m">Luglio</span><h3>Anteprima</h3><p>Primo appuntamento in città, con la comunicazione già in corsa.</p></li>
+        <li><span class="m">Sett. · Ott.</span><h3>Allestimento</h3><p>Produzione e allestimento delle opere nelle sedi.</p></li>
         <li class="key"><span class="m">Novembre</span><h3>Inaugurazione e mostra</h3><p>Weekend di apertura, poi 3–4 settimane di mostra e voto del pubblico.</p></li>
         <li class="key"><span class="m">Fine mostra</span><h3>Awards e report</h3><p>Premiazione nel weekend di chiusura, poi i risultati condivisi con la città.</p></li>
       </ol>
